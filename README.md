@@ -10,7 +10,7 @@ In the source code folder,
 go mod init example.com/pbproxy
 go mod tidy
 go run <program name> <options>
-OR
+	OR
 go build <program name>
 ./<program name> <options>
  
