@@ -6,16 +6,14 @@ To run the program, in the plugboard_proxy folder:
 
 <prompt>$ sudo go run plugboard_proxy.go [-l listenport] -p pwdfile destination port
 	
--l listenport       plugboard_proxy operates in reverse-proxy mode. Listens for inbound connections on <listenport> 
-                    and relays them to <destination>:<port>
+-l listenport	plugboard_proxy operates in reverse-proxy mode. Listens for inbound connections on <listenport> and relays them to <destination>:<port>
 	
--p pwdfile		    Uses the passphrase in the first line of <pwdfile>
+-p pwdfile	Uses the passphrase in the first line of <pwdfile>
 
-destination         reverse-proxy mode: hostname / IP address of the service to relay traffic to
-                    client mode: hostname / IP address of the plugboard_proxy-server
+destination	reverse-proxy mode: hostname / IP address of the service to relay traffic to client mode: hostname / IP address of the plugboard_proxy-server
 	
-port                reverse-proxy mode: port of the service to relay traffic to
-                    client mode: port of the plugboard_proxy-server
+port	reverse-proxy mode: port of the service to relay traffic to client mode: port of the plugboard_proxy-server
+	
 EXAMPLES:
 => Reverse-Proxy Mode:
 	
