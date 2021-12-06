@@ -15,20 +15,20 @@ destination         reverse-proxy mode: hostname / IP address of the service to 
 port                reverse-proxy mode: port of the service to relay traffic to
                     client mode: port of the plugboard_proxy-server
 EXAMPLES:
-  
-  => Reverse-Proxy Mode:
+=> Reverse-Proxy Mode:
 	
 	go run plugboard_proxy.go -l <listenport> -p <pswd-file> <destination> <port>
   
-  => Client Mode:
+=> Client Mode:
 	
 	go run plugboard_proxy.go -p <pswd-file> <destination> <port>
   
-  => SSH EXAMPLE
+SSH EXAMPLE:
   
-    => Proxy Server:
-  ashutosh@ashutosh:~/113275559$ sudo ./plugboard_proxy -p password -l 2223 192.168.100.20 22
+=> Proxy Server:
+	
+	sudo ./plugboard_proxy -p password -l 2223 192.168.100.20 22
   
-  => Client 1:
+=> Client 1:
   
-  ashutosh@ashutosh:~/113275559$ ssh -o "ProxyCommand go run plugboard_proxy.go -p password 192.168.100.5 2223" localhost
+	ssh -o "ProxyCommand go run plugboard_proxy.go -p password 192.168.100.5 2223" localhost
